@@ -3,19 +3,42 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.27.0",
+    "date-fns": "^1.30.1",
+    "file-loader": "^1.1.11",
+    "luxon": "^1.26.0",
+    "media-viewer-js": "^11.7.1",
+    "prop-types": "^15.6.1",
+    "terra-application": "^1.52.2",
+    "terra-overlay": "^3.73.0",
+    "terra-signature": "^2.40.0",
+    "terra-table": "^4.32.0",
+    "worker-plugin": "^5.0.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "h8k-components": "^1.0.0",
+    "h8k-design": "^1.0.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^4.0.1",
+    "sass": "^1.66.1",
     "web-vitals": "^2.1.4"
+  },
+  "peerDependencies": {
+    "orion-application": "^1.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-intl": "^2.3.0",
+    "terra-application": "^1.52.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "stop": "taskkill -F -IM node.exe",
+    "scss": "sass --whatch scss -o css"
   },
   "eslintConfig": {
     "extends": [
@@ -23,16 +46,20 @@
       "react-app/jest"
     ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "devDependencies": {
+    "sass": "^1.68.0",
+    "orion-application": "^1.1.0",
+    "orion-toolkit-js": "^4.3.0",
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
+    "@babel/plugin-transform-object-assign": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
+    "@cerner/browserslist-config-terra": "^3.2.0",
+    "browserslist-config-terra": "^2.0.0"
+  },
+  "browserslist": [
+    "extends browserslist-config-terra"
+  ]
 }
